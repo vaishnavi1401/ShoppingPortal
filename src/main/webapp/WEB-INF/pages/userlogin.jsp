@@ -1,45 +1,29 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1" isELIgnored="false"%>
-<!-- <!DOCTYPE html>
-<html>
-<head>
-<meta charset="ISO-8859-1">
-<title>login</title>
-</head>
-<style>
-input[type=text], input[type=password] {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  box-sizing: border-box;
-}
-</style>
-<body>
- 
-result is:${result}
-how is :${how }
-</body>
-</html>
-*/ -->
-<!DOCTYPE html>
+    <!DOCTYPE html>
   <head><style>
-    body {font-family: Arial, Helvetica, sans-serif;}
-form {border: 3px solid #1656a0;}
+body {font-family: Arial, Helvetica, sans-serif;}
+div {border: 2px solid #ffa600;width: 300px;
+  height: 300px;padding: 12px 20px;
+  position: absolute;
+    top:30%;
+    left: 40%;
+    margin-top: -50px;
+    margin-left: -50px;
+   }
 
 input[type=text], input[type=password] {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
   display: inline-block;
-  border: 1px solid #ff008c
+  border: 1px solid #ffa600
 ;
   box-sizing: border-box;
 }
 
 button {
-  background-color: #ff008c
+  background-color: #ffa600
 
 
 ;
@@ -49,8 +33,7 @@ button {
   border: none;
   cursor: pointer;
   width: 100%;
-}
-      </style></head>
+}      </style></head>
 
 
 <form action="user1">

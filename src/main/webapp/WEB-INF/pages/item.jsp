@@ -5,7 +5,14 @@
 <head>
 <style>
 body {font-family: Arial, Helvetica, sans-serif;}
-form {border: 3px solid #f1f1f1;}
+div {border: 3px solid #f1f1f1;width: 300px;
+  height: 300px;padding: 12px 20px;
+  position: absolute;
+    top:30%;
+    left: 40%;
+    margin-top: -50px;
+    margin-left: -50px;
+   }
 
 input[type=text], input[type=password] {
   width: 100%;
@@ -30,72 +37,21 @@ button {
   width: 100%;
 }
 
-button:hover {
-  opacity: 0.8;
-}
-
-.cancelbtn {
-  width: auto;
-  padding: 10px 18px;
-  background-color:  #aa00ff
-;
-}
-
-.imgcontainer {
-  text-align: center;
-  margin: 24px 0 12px 0;
-}
-
-.container {
-  padding: 16px;
-}
-
-span.psw {
-  float: right;
-  padding-top: 16px;
-}
-
-/* Change styles for span and cancel button on extra small screens */
-@media screen and (max-width: 300px) {
-  span.psw {
-     display: block;
-     float: none;
-  }
-  .cancelbtn {
-     width: 100%;
-  }
-}
 </style>
 </head>
-
- <form:form action="processForm">
-     <input type = "submit" name = "action1" value="Action1"/>
-     <input type = "submit" name = "action2" value="Action2"/> 
-   </form:form>
-
+<div>
 <form action="additem">
-  <div class="container">
   <h1>item list</h1>
+ 
    <button>additem</button>
-      <div class="container signin">
-     </div>
-     </div>
+  
 </form>
 
 <form action="updateitem">
-  <div class="container">
-  <h1>item list</h1>
    <button>updateitem</button>
-      <div class="container signin">
-     </div>
-     </div>
+     
 </form>
-
 <form action="deleteitem">
-  <div class="container">
-  <h1>item list</h1>
    <button>deleteitem</button>
-      <div class="container signin">
-     </div>
-     </div>
 </form>
+</div>

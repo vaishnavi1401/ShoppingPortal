@@ -29,7 +29,7 @@ public  ModelAndView submititem(HttpServletRequest re,HttpServletResponse req) t
 		ModelAndView mv=new ModelAndView();
 		 b=as.check(itemname,quantity,price);
 
-			mv.setViewName("Welcome");
+			mv.setViewName("admin");
 	if(b)
 	{
 		mv.addObject("result","Successful");

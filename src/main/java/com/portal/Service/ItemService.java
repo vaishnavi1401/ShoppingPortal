@@ -18,8 +18,7 @@ public boolean check(String itemname,int quantity,int price_per_item) throws Cla
 			if(b)
 			{
 				stmt = ma.conn.createStatement();
-				query = "insert into item values ('" + itemname + "',+ quantity + price_per_item ";
-
+				query = "INSERT INTO item values(" + itemname + ",'"+ quantity +"," +price_per_item +")";
 				res=stmt.executeUpdate(query);
 			r = stmt.executeQuery("SELECT * FROM item");
 			while(r.next()) {

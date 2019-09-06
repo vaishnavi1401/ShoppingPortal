@@ -3,7 +3,14 @@
 <head>
 <style>
 body {font-family: Arial, Helvetica, sans-serif;}
-form {border: 3px solid #f1f1f1;}
+div {border: 3px solid #f1f1f1;width: 300px;
+  height: 400px;padding: 12px 20px;
+  position: absolute;
+    top:30%;
+    left: 40%;
+    margin-top: -50px;
+    margin-left: -50px;
+   }
 
 input[type=text], input[type=password] {
   width: 100%;
@@ -27,32 +34,6 @@ button {
   cursor: pointer;
   width: 100%;
 }
-
-button:hover {
-  opacity: 0.8;
-}
-
-.cancelbtn {
-  width: auto;
-  padding: 10px 18px;
-  background-color:  #aa00ff
-;
-}
-
-.imgcontainer {
-  text-align: center;
-  margin: 24px 0 12px 0;
-}
-
-.container {
-  padding: 16px;
-}
-
-span.psw {
-  float: right;
-  padding-top: 16px;
-}
-
 </style>
 </head>
 
