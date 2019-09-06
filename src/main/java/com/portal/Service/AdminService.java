@@ -1,51 +1,23 @@
 package com.portal.Service;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
 
 public class AdminService {
-	Statement stmt = null;
-	ResultSet r = null;
-	int res;
-
+	
+ public boolean add(String psw,String pswr)
+ {
+	//boolean b=email.equalsIgnoreCase("vaishnaviaggarwal1401@gmail.com");
+   boolean b1=false;
+		  b1=psw.equalsIgnoreCase(pswr);
+  return b1;
+    
+}
 public boolean check(String user,String psw)
-{
-	
-	boolean b=false,b1=false;
-
-
-	String query,email1,psw1;
-
-		try {
-
-			MyConnection1 ma=new MyConnection1();
-			b=ma.check();
-			if(b)
-			{
-				stmt = ma.conn.createStatement();
-				query="INSERT INTO admin values('" +user+ "', '" +psw+ "')"; 
-				res=stmt.executeUpdate(query);
-			r = stmt.executeQuery("SELECT * FROM admin");
-			while(r.next()) {
-				email1 = r.getString(1);
-				//psw = r.getInt(2);
-				psw1 = r.getString(2);
-				//msal = r.getInt(4);
-				//System.out.println(email1+" "+psw1);
-				if(user.equals(email1)&&psw1.equals(psw))
-					b1=true;
-				
-			}
-			stmt.close();
-		//	ma.conn.close();
-		}
-		}
-		catch(SQLException s) {
-			s.printStackTrace();
-		}
-			System.out.println(b+"I");
-	return b1;
-	
-	}
+{ 
+	boolean b=false;
+//System.out.println("true1");
+	if(user.equals("vaishnavi")&&psw.equals("1234"))
+		b=true;
+	//boolean b1=psw.equalsIgnoreCase(pswr);
+	return b;
+}
 
 }

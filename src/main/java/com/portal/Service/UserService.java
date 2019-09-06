@@ -26,7 +26,7 @@ public boolean check(String user,String psw) throws ClassNotFoundException
 			if(b)
 			{
 				stmt = ma.conn.createStatement();
-				query="INSERT INTO user values('" +user+ "', '" +psw+ "')"; 
+				query="INSERT INTO user values("  +user+ ",'" + psw+ "')"; 
 				res=stmt.executeUpdate(query);
 			r = stmt.executeQuery("SELECT * FROM user");
 			while(r.next()) {

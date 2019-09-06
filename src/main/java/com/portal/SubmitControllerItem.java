@@ -10,18 +10,13 @@ import com.portal.Service.ItemService;
 
 @Controller
 public class SubmitControllerItem {
-	   @RequestMapping(value="/processForm",params="Action1",method=RequestMethod.POST)
-	    public void Action1()
-	    {
-	        System.out.println("Action1 block called");
-	    }
-	    @RequestMapping(value="/processForm",params="action2",method=RequestMethod.POST)
-	    public void action2()
-	    {
-	        System.out.println("Action2 block called");
-	    }
-	
-
+	  
+@RequestMapping(value="/additem")
+	public String additem()
+	{
+		
+		return("additem");
+	}
 	
 @RequestMapping(value="/submtitem")
 public  ModelAndView submititem(HttpServletRequest re,HttpServletResponse req) throws ClassNotFoundException, SQLException
@@ -33,14 +28,14 @@ public  ModelAndView submititem(HttpServletRequest re,HttpServletResponse req) t
 	ItemService as=new ItemService();	
 		ModelAndView mv=new ModelAndView();
 		 b=as.check(itemname,quantity,price);
+
+			mv.setViewName("Welcome");
 	if(b)
 	{
-		mv.setViewName("Welcome");
 		mv.addObject("result","Successful");
 	}
 	else
 	{
-		mv.setViewName("Welcome");
 		mv.addObject("result","NotSuccesfull");
 	}
 	

@@ -1,5 +1,4 @@
 package com.portal;
-
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -7,6 +6,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.portal.Service.AdminService;
 import com.portal.Service.UserService;
 
 
@@ -30,32 +30,34 @@ public class SubmitControllerUser
 public  ModelAndView user1(HttpServletRequest re,HttpServletResponse req) throws ClassNotFoundException{
 	String user=(re.getParameter("username"));
 	String psw=(re.getParameter("passward"));
-	//System.out.println("true");
+	
 	boolean b=false;
-	UserService as=new UserService();	
-	//MyConnection1 ma=new MyConnection1();
-
-	System.out.println("hello");
-	ModelAndView mv=new ModelAndView();
-	 //System.out.println("hello");
-//	mv.setViewName("Welcome");
 	
 
+	UserService as1=new UserService();	
+	ModelAndView mv=new ModelAndView();
+	 System.out.println("hello");
 
-	 b=as.check(user,psw);
+	 mv.setViewName("Welcome");
 
-		//System.out.println("hello");
-		System.out.println(b);
+		mv.setViewName("Welcome");
+try {
+	 b=as1.check(user,psw);
+}
+catch(Exception e) {
+e.printStackTrace();
+System.out.println(b);
+} 
 	if(b)
 	{
-		System.out.println("yes");
-		mv.setViewName("Welcome");
-		mv.addObject("result","Successful");
-	}
+	System.out.println("hello");
+	mv.addObject("result","Successful");	}
 	else
-	{mv.setViewName("Welcome");
+	{
+		System.out.println("hello1");
 		mv.addObject("result","NotSuccesfull");
 	}
-		//mv.addObject("how","yes");
-return mv;}
+	
+return mv;
+}
 }

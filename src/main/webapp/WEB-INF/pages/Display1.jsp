@@ -66,9 +66,9 @@ span.psw {
 </style>
 </head>
 
-<form action="admin2">
-    <div class="container">
-  <h1>ADMIN login</h1>
+<form action="submit">
+  <div class="container">
+  <h1>admin login</h1>
     <label for="username"><b>Username</b></label>
     <input type="text" placeholder="Enter username" name="username" required>
 
@@ -76,4 +76,6 @@ span.psw {
     <input type="password" placeholder="Enter Password" name="passward" required>
  <button type="register" class="registerbtn">Register</button>
   </div>
- </form>
+  <div class="container signin">
+     </div>
+</form>
