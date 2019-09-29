@@ -20,7 +20,7 @@ public class SubmitController {
 	}
 
 @RequestMapping(value="/submit")
-public  ModelAndView submit1(HttpServletRequest re,HttpServletResponse req){
+public  ModelAndView submit(HttpServletRequest re,HttpServletResponse req){
 	String user=(re.getParameter("username"));
 	String psw=(re.getParameter("passward"));
 	
@@ -29,10 +29,7 @@ public  ModelAndView submit1(HttpServletRequest re,HttpServletResponse req){
 
 	AdminService as1=new AdminService();	
 	ModelAndView mv=new ModelAndView();
-	 System.out.println("hello");
-
-	 mv.setViewName("item");
-
+	 
 try {
 	 b=as1.check(user,psw);
 }
@@ -42,10 +39,14 @@ System.out.println(b);
 } 
 	if(b)
 	{
+		 mv.setViewName("item");
 	System.out.println("hello");
 		}
 	else
 	{
+
+		 mv.setViewName("Display1");
+		 mv.addObject("result","INVALID ");
 		System.out.println("hello1");
 	}
 return mv;

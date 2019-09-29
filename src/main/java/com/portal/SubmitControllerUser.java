@@ -37,11 +37,8 @@ public  ModelAndView user1(HttpServletRequest re,HttpServletResponse req) throws
 	UserService as1=new UserService();	
 	ModelAndView mv=new ModelAndView();
 	 System.out.println("hello");
-
-	 mv.setViewName("Welcome");
-
-		mv.setViewName("Welcome");
-try {
+	 mv.setViewName("admin");
+	try {
 	 b=as1.check(user,psw);
 }
 catch(Exception e) {

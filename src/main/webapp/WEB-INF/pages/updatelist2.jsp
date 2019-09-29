@@ -12,8 +12,16 @@ text-align:center;
 }
 </style>
 </head>
-<body>${result}
-<p1>welcome</p1>
+<body> result is: ${result}
+
+<form action="x1"> 
+<div class="container">
+ 
+    <input type="text" placeholder="Enterold " name="olditemname" required>
+ <input type="text" placeholder="Enter " name="newitemname" required>
+ <button class="registerbtn">Submit</button>
+</div>
+</form>
 
 </body>
 </html>

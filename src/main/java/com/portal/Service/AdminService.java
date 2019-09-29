@@ -1,15 +1,7 @@
 package com.portal.Service;
 
 public class AdminService {
-	
- public boolean add(String psw,String pswr)
- {
-	//boolean b=email.equalsIgnoreCase("vaishnaviaggarwal1401@gmail.com");
-   boolean b1=false;
-		  b1=psw.equalsIgnoreCase(pswr);
-  return b1;
-    
-}
+
 public boolean check(String user,String psw)
 { 
 	boolean b=false;

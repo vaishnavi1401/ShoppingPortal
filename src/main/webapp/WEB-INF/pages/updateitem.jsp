@@ -4,8 +4,14 @@
 <head>
 <style>
 body {font-family: Arial, Helvetica, sans-serif;}
-form {border: 3px solid #f1f1f1;}
-
+div {border: 3px solid #f1f1f1;width: 300px;
+  height: 400px;padding: 12px 20px;
+  position: absolute;
+    top:30%;
+    left: 40%;
+    margin-top: -50px;
+    margin-left: -50px;
+   }
 input[type=text], input[type=password] {
   width: 100%;
   padding: 12px 20px;
@@ -18,8 +24,6 @@ input[type=text], input[type=password] {
 
 button {
   background-color: #aa00ff
-
-
 ;
   color: white;
   padding: 14px 20px;
@@ -28,46 +32,18 @@ button {
   cursor: pointer;
   width: 100%;
 }
-
-button:hover {
-  opacity: 0.8;
-}
-
-.cancelbtn {
-  width: auto;
-  padding: 10px 18px;
-  background-color:  #aa00ff
-;
-}
-
-.imgcontainer {
-  text-align: center;
-  margin: 24px 0 12px 0;
-}
-
-.container {
-  padding: 16px;
-}
-
-span.psw {
-  float: right;
-  padding-top: 16px;
-}
-
-/* Change styles for span and cancel button on extra small screens */
-@media screen and (max-width: 300px) {
-  span.psw {
-     display: block;
-     float: none;
-  }
-  .cancelbtn {
-     width: 100%;
-  }
-}
-
-
 </style>
 </head>
-<body>
-${result}
-</body>
+<div>
+<form action="itemupdatename">
+  <h1>UPDATE ITEM</h1>
+     <button >  UPDATE NAME </button>
+     </form>
+  <form action="itemupdateprice">
+      <button >UPDATE PRICE </button>
+      </form>
+  <form action="itemupdatequantity">
+    <button >UPDATE QUANTITY </button>
+   
+  </form>
+  </div>
