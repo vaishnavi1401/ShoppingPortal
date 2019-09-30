@@ -37,9 +37,9 @@ public boolean check(String itemname,int quantity,int price_per_item) throws Cla
 	return b;	
 	}
 
-public boolean check(String olditemname,String itemname) {
+public boolean check(String olditemname,String itemname,int j) {
 	// TODO Auto-generated method stub
-	boolean b=false;int j=1;
+	boolean b=false;
 	String query,iname;
 		try {
 			MyConnection1 ma=new MyConnection1();
@@ -98,6 +98,33 @@ public boolean check(String itemname) {
 				System.out.println(iname);
 				
 			}
+			stmt.close();
+		
+			}
+		}
+		catch(SQLException s) {
+			s.printStackTrace();
+		}
+		System.out.println(b);
+	return b;
+}
+
+
+
+public boolean check(String name, int quantity) {
+	boolean b=false;int j=1;
+	String query, query1,iname;double bill=0;
+		try {
+			MyConnection1 ma=new MyConnection1();
+			b=ma.check();
+			if(b)
+			{
+				stmt = ma.conn.createStatement();
+						r = stmt.executeQuery("SELECT price FROM item where itemname="+name);
+				       
+			bill=bill+r.getInt("price");
+			//r=stmt.executeQuery("update user SET BILL="+bill+"where username="+name);
+			System.out.print(bill);
 			stmt.close();
 		
 			}

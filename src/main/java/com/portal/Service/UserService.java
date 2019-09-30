@@ -24,15 +24,12 @@ public boolean check(String user,String psw) throws ClassNotFoundException
 			if(b)
 			{
 				stmt = ma.conn.createStatement();
-				query="INSERT INTO user values("  +user+ ",'" + psw+ "')"; 
-				res=stmt.executeUpdate(query);
+				//query="INSERT INTO user values("  +user+ ",'" + psw+ "')"; 
+				//res=stmt.executeUpdate(query);
 			r = stmt.executeQuery("SELECT * FROM user");
 			while(r.next()) {
 				email1 = r.getString(1);
-				//psw = r.getInt(2);
-				psw1 = r.getString(2);
-				//msal = r.getInt(4);
-				//System.out.println(email1+" "+psw1);
+				psw1 = r.getString(3);
 				if(user.equals(email1)&&psw1.equals(psw))
 					b1=true;
 				
@@ -44,8 +41,30 @@ public boolean check(String user,String psw) throws ClassNotFoundException
 		catch(SQLException s) {
 			s.printStackTrace();
 		}
-		System.out.println(b);
-	return b1;	
+			return b1;	
 	}
+
+public boolean check(String user, String add, String psw, String psw1) {
+
+	boolean b=false,b1=false;
+	String query;
+		try {
+			MyConnection1 ma=new MyConnection1();
+			b=ma.check();
+			System.out.println(user);
+			if(b&&psw.equals(psw1))
+			{
+				stmt = ma.conn.createStatement();
+				query = "INSERT INTO user values('" + user + "','"+ add +"','" + psw   +"')";
+				res=stmt.executeUpdate(query);
+			stmt.close();
+			b1=true;
+		}
+		}
+		catch(SQLException s) {
+			s.printStackTrace();
+		}
+	return b1;	
+}
 
 }
